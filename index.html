@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Produk - Tema Hewan Lucu</title>
+    <title>Toko Premium - Berbagai Layanan Premium Terlengkap</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -22,7 +22,7 @@
             overflow-x: hidden;
         }
 
-        /* Animasi Awan yang Lebih Halus */
+        /* Animasi Awan */
         .cloud {
             position: absolute;
             background: rgba(255, 255, 255, 0.9);
@@ -77,82 +77,12 @@
             animation: floatCloud 28s infinite ease-in-out;
         }
 
-        .cloud4 {
-            width: 120px;
-            height: 40px;
-            top: 40%;
-            left: 20%;
-            animation: floatCloud 22s infinite ease-in-out;
-        }
-
-        .cloud5 {
-            width: 160px;
-            height: 50px;
-            bottom: 30%;
-            right: 15%;
-            animation: floatCloud 26s infinite ease-in-out reverse;
-        }
-
         @keyframes floatCloud {
             0%, 100% { 
                 transform: translateX(0) translateY(0); 
             }
-            25% { 
-                transform: translateX(20px) translateY(-10px); 
-            }
             50% { 
-                transform: translateX(40px) translateY(5px); 
-            }
-            75% { 
-                transform: translateX(10px) translateY(10px); 
-            }
-        }
-
-        /* Animasi Angin */
-        .wind {
-            position: absolute;
-            width: 100px;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 10px;
-            z-index: -1;
-            filter: blur(2px);
-        }
-
-        .wind1 {
-            top: 15%;
-            left: -100px;
-            animation: windFlow 15s infinite linear;
-        }
-
-        .wind2 {
-            top: 60%;
-            left: -100px;
-            animation: windFlow 18s infinite linear;
-            animation-delay: 2s;
-        }
-
-        .wind3 {
-            top: 80%;
-            left: -100px;
-            animation: windFlow 20s infinite linear;
-            animation-delay: 5s;
-        }
-
-        @keyframes windFlow {
-            0% {
-                transform: translateX(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.7;
-            }
-            90% {
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateX(calc(100vw + 100px));
-                opacity: 0;
+                transform: translateX(20px) translateY(-10px); 
             }
         }
 
@@ -167,41 +97,21 @@
             text-align: center;
             margin-bottom: 30px;
             padding: 25px;
-            background: linear-gradient(135deg, #ff99cc, #ffccff);
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
-            border: 3px solid #ff66b2;
-            animation: bounceIn 1s ease-out;
-        }
-
-        @keyframes bounceIn {
-            0% {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            70% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
+            border: 3px solid #ff99cc;
         }
 
         h1 {
             color: #ff3399;
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 0px #ffccff;
-            font-weight: 800;
         }
 
         .subtitle {
-            color: #9966cc;
-            font-size: 1.3rem;
-            font-weight: 600;
-            line-height: 1.5;
+            color: #666;
+            font-size: 1.2rem;
         }
 
         .animal-icons {
@@ -209,8 +119,7 @@
             justify-content: center;
             gap: 20px;
             margin-top: 15px;
-            font-size: 2.5rem;
-            filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.1));
+            font-size: 2rem;
         }
 
         /* Kategori */
@@ -224,27 +133,21 @@
 
         .category-btn {
             padding: 12px 25px;
-            background: linear-gradient(135deg, #99ccff, #ccddff);
-            border: none;
+            background: #fff;
+            border: 2px solid #ff99cc;
             border-radius: 50px;
-            font-weight: 700;
-            color: #3366cc;
+            font-weight: 600;
+            color: #ff3399;
             cursor: pointer;
             transition: all 0.3s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-size: 1.1rem;
-            border: 2px solid #99ccff;
         }
 
-        .category-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
+        .category-btn:hover,
         .category-btn.active {
-            background: linear-gradient(135deg, #ff99cc, #ffccff);
-            color: #ff3399;
-            border: 2px solid #ff99cc;
+            background: #ff99cc;
+            color: white;
+            transform: translateY(-3px);
         }
 
         /* Keranjang */
@@ -256,75 +159,60 @@
         }
 
         .cart-button {
-            background: linear-gradient(135deg, #ff6699, #ff99cc);
+            background: #ff6699;
             color: white;
             border: none;
             border-radius: 50%;
-            width: 70px;
-            height: 70px;
-            font-size: 1.8rem;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
             cursor: pointer;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: all 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
         }
 
         .cart-button:hover {
-            transform: scale(1.1) rotate(5deg);
+            background: #ff4d87;
+            transform: scale(1.1);
         }
 
         .cart-count {
             position: absolute;
             top: -5px;
             right: -5px;
-            background: linear-gradient(135deg, #ff3333, #ff6666);
+            background: #ff3333;
             color: white;
             border-radius: 50%;
-            width: 28px;
-            height: 28px;
+            width: 25px;
+            height: 25px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: bold;
-            border: 2px solid white;
         }
 
         .cart-modal {
             display: none;
             position: fixed;
-            top: 100px;
+            top: 90px;
             right: 20px;
-            width: 380px;
-            background: linear-gradient(135deg, #ffffff, #f0f8ff);
-            border-radius: 20px;
+            width: 350px;
+            background: white;
+            border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
             z-index: 100;
             padding: 20px;
             max-height: 70vh;
             overflow-y: auto;
-            border: 3px solid #ffccff;
-            animation: slideIn 0.3s ease-out;
+            border: 2px solid #ff99cc;
         }
 
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(100px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .cart-modal.active {
+            display: block;
         }
 
         .cart-header {
@@ -336,12 +224,6 @@
             border-bottom: 2px dashed #ff99cc;
         }
 
-        .cart-header h3 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #ff3399;
-        }
-
         .cart-items {
             margin-bottom: 15px;
         }
@@ -350,7 +232,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 0;
+            padding: 10px 0;
             border-bottom: 1px solid #f0f0f0;
         }
 
@@ -359,15 +241,13 @@
         }
 
         .cart-item-name {
-            font-weight: 700;
+            font-weight: bold;
             color: #ff6699;
-            font-size: 1.1rem;
         }
 
         .cart-item-price {
             color: #666;
-            font-size: 1rem;
-            font-weight: 600;
+            font-size: 0.9rem;
         }
 
         .cart-item-quantity {
@@ -377,28 +257,20 @@
         }
 
         .quantity-btn {
-            background: linear-gradient(135deg, #99ccff, #ccddff);
+            background: #f0f0f0;
             border: none;
-            width: 28px;
-            height: 28px;
+            width: 25px;
+            height: 25px;
             border-radius: 50%;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            color: #3366cc;
-            transition: all 0.2s;
-            font-size: 1rem;
-        }
-
-        .quantity-btn:hover {
-            transform: scale(1.1);
         }
 
         .cart-total {
-            font-weight: 800;
-            font-size: 1.4rem;
+            font-weight: bold;
+            font-size: 1.2rem;
             text-align: right;
             margin: 15px 0;
             color: #ff3399;
@@ -406,22 +278,18 @@
 
         .checkout-btn {
             width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, #66cc66, #99ff99);
+            padding: 12px;
+            background: #4CAF50;
             color: white;
             border: none;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 700;
+            border-radius: 8px;
+            font-size: 1rem;
             cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
         }
 
         .checkout-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-            background: linear-gradient(135deg, #55bb55, #88ee88);
+            background: #45a049;
         }
 
         /* Grid Produk */
@@ -432,59 +300,51 @@
         }
 
         .product-card {
-            background: linear-gradient(135deg, #ffffff, #f8f8ff);
-            border-radius: 20px;
+            background: white;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s;
-            cursor: pointer;
-            border: 3px solid transparent;
-            animation: fadeInUp 0.5s ease-out;
-            animation-fill-mode: both;
-        }
-
-        .product-card:nth-child(1) { animation-delay: 0.1s; }
-        .product-card:nth-child(2) { animation-delay: 0.2s; }
-        .product-card:nth-child(3) { animation-delay: 0.3s; }
-        .product-card:nth-child(4) { animation-delay: 0.4s; }
-        .product-card:nth-child(5) { animation-delay: 0.5s; }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .product-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-            border: 3px solid #ffccff;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
 
         .product-header {
             padding: 20px;
-            background: linear-gradient(135deg, #ccffcc, #e6ffe6);
-            color: #339933;
             text-align: center;
             position: relative;
-            border-bottom: 3px dashed #99cc99;
+            color: white;
         }
 
-        .product-header.capcut {
-            background: linear-gradient(135deg, #ffccff, #ffddff);
-            color: #cc66cc;
-            border-bottom: 3px dashed #ff99cc;
+        .product-header.disney {
+            background: linear-gradient(135deg, #8a2be2, #ff69b4);
         }
 
-        .product-header.am {
-            background: linear-gradient(135deg, #ccffff, #e6ffff);
-            color: #3399cc;
-            border-bottom: 3px dashed #99cccc;
+        .product-header.vidio {
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+        }
+
+        .product-header.wink {
+            background: linear-gradient(135deg, #4ecdc4, #556270);
+        }
+
+        .product-header.viu {
+            background: linear-gradient(135deg, #7b4397, #dc2430);
+        }
+
+        .product-header.iqiyi {
+            background: linear-gradient(135deg, #00b4db, #0083b0);
+        }
+
+        .product-header.bstation {
+            background: linear-gradient(135deg, #834d9b, #d04ed6);
+        }
+
+        .product-header.wattpad {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
         }
 
         .product-header::before {
@@ -493,41 +353,62 @@
             left: 15px;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 1.8rem;
-            filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.1));
+            font-size: 1.5rem;
+        }
+
+        .product-header.disney::before {
+            content: "🐻";
+        }
+
+        .product-header.vidio::before {
+            content: "🎬";
+        }
+
+        .product-header.wink::before {
+            content: "✨";
+        }
+
+        .product-header.viu::before {
+            content: "📺";
+        }
+
+        .product-header.iqiyi::before {
+            content: "🎞️";
+        }
+
+        .product-header.bstation::before {
+            content: "🎮";
+        }
+
+        .product-header.wattpad::before {
+            content: "📖";
         }
 
         .product-title {
-            font-size: 1.6rem;
-            font-weight: 800;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
 
         .product-price {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             margin-top: 5px;
-            font-weight: 700;
+            font-weight: bold;
         }
 
         .product-description {
             padding: 15px;
-            color: #444;
-            font-size: 1rem;
-            line-height: 1.6;
-            font-weight: 500;
+            color: #666;
+            font-size: 0.9rem;
         }
 
+        /* DETAIL PRODUK OTOMATIS TERBUKA */
         .product-details {
-            max-height: 0;
+            max-height: 1000px;
             overflow: hidden;
-            transition: max-height 0.5s ease;
-            padding: 0 15px;
-            background-color: #f9f9ff;
-            border-radius: 0 0 20px 20px;
-        }
-
-        .product-details.active {
-            max-height: 500px;
             padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 0 0 15px 15px;
+            transition: max-height 0.5s ease;
         }
 
         .feature-list {
@@ -536,35 +417,36 @@
         }
 
         .feature-list li {
-            padding: 8px 0;
+            padding: 5px 0;
             position: relative;
-            padding-left: 30px;
-            transition: all 0.2s;
-            font-weight: 500;
-            color: #555;
-        }
-
-        .feature-list li:hover {
-            transform: translateX(5px);
-            color: #ff6699;
+            padding-left: 25px;
         }
 
         .feature-list li::before {
-            content: "🐾";
+            content: "✓";
             position: absolute;
             left: 0;
-            font-size: 1rem;
+            color: #4CAF50;
+            font-weight: bold;
         }
 
         .guarantee {
             margin-top: 10px;
+            padding: 8px;
+            background: #e8f5e9;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            color: #2e7d32;
+        }
+
+        .note-box {
+            margin-top: 10px;
             padding: 10px;
-            background: linear-gradient(135deg, #e6ffe6, #f0fff0);
-            border-radius: 10px;
-            font-size: 1rem;
-            color: #339933;
-            border-left: 4px solid #66cc66;
-            font-weight: 600;
+            background: #fff3cd;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            color: #856404;
+            border-left: 4px solid #ffc107;
         }
 
         .product-actions {
@@ -576,49 +458,42 @@
 
         .buy-btn, .add-to-cart-btn {
             flex: 1;
-            padding: 12px;
+            padding: 10px;
             border: none;
-            border-radius: 12px;
-            font-weight: 700;
+            border-radius: 8px;
+            font-weight: bold;
             cursor: pointer;
             transition: all 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            font-size: 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            gap: 5px;
         }
 
         .buy-btn {
-            background: linear-gradient(135deg, #66cc66, #99ff99);
+            background: #4CAF50;
             color: white;
         }
 
         .buy-btn:hover {
-            background: linear-gradient(135deg, #55bb55, #88ee88);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            background: #45a049;
         }
 
         .add-to-cart-btn {
-            background: linear-gradient(135deg, #ff9966, #ffcc99);
+            background: #ff9800;
             color: white;
         }
 
         .add-to-cart-btn:hover {
-            background: linear-gradient(135deg, #ee8855, #ffbb88);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            background: #e68900;
         }
 
         footer {
             text-align: center;
             margin-top: 40px;
             padding: 20px;
-            color: #9966cc;
-            font-size: 1rem;
-            font-weight: 600;
+            color: #888;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
@@ -634,19 +509,6 @@
             .categories {
                 gap: 10px;
             }
-            
-            .category-btn {
-                padding: 10px 15px;
-                font-size: 1rem;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .subtitle {
-                font-size: 1.1rem;
-            }
         }
     </style>
 </head>
@@ -655,13 +517,6 @@
     <div class="cloud cloud1"></div>
     <div class="cloud cloud2"></div>
     <div class="cloud cloud3"></div>
-    <div class="cloud cloud4"></div>
-    <div class="cloud cloud5"></div>
-    
-    <!-- Animasi Angin -->
-    <div class="wind wind1"></div>
-    <div class="wind wind2"></div>
-    <div class="wind wind3"></div>
 
     <div class="container">
         <!-- Keranjang Belanja -->
@@ -672,22 +527,20 @@
             </button>
             <div class="cart-modal" id="cartModal">
                 <div class="cart-header">
-                    <h3>🛒 Keranjang Belanja</h3>
-                    <button id="closeCart" style="background:none; border:none; font-size:1.5rem; cursor:pointer; color: #ff3399;">&times;</button>
+                    <h3>Keranjang Belanja</h3>
+                    <button id="closeCart">&times;</button>
                 </div>
                 <div class="cart-items" id="cartItems">
                     <!-- Item keranjang akan ditambahkan di sini -->
                 </div>
                 <div class="cart-total" id="cartTotal">Total: Rp 0</div>
-                <button class="checkout-btn" id="checkoutBtn">
-                    <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
-                </button>
+                <button class="checkout-btn" id="checkoutBtn">Checkout via WhatsApp</button>
             </div>
         </div>
 
         <header>
-            <h1>🐾 Panel Produk Lucu 🐾</h1>
-            <p class="subtitle">Panel Private dengan garansi 10 hari - Super Cepat & Anti Down</p>
+            <h1>Toko Premium 🐻🐰</h1>
+            <p class="subtitle">Berbagai layanan premium terlengkap dengan harga terbaik</p>
             <div class="animal-icons">
                 <span>🐰</span>
                 <span>🐱</span>
@@ -699,200 +552,743 @@
 
         <!-- Kategori -->
         <div class="categories">
-            <button class="category-btn" data-category="capcut">CapCut</button>
-            <button class="category-btn" data-category="am">AM Panel</button>
-            <button class="category-btn" data-category="panel">Panel Lainnya</button>
             <button class="category-btn active" data-category="all">Semua Produk</button>
+            <button class="category-btn" data-category="disney">Disney+</button>
+            <button class="category-btn" data-category="vidio">Vidio</button>
+            <button class="category-btn" data-category="wink">Wink</button>
+            <button class="category-btn" data-category="viu">Viu</button>
+            <button class="category-btn" data-category="iqiyi">IQIYI</button>
+            <button class="category-btn" data-category="bstation">Bstation</button>
+            <button class="category-btn" data-category="wattpad">Wattpad</button>
         </div>
 
         <div class="products-grid">
-            <!-- Produk CapCut -->
-            <div class="product-card" data-category="capcut">
-                <div class="product-header capcut">
-                    <div class="product-title">CapCut Private</div>
+            <!-- Produk Disney -->
+            <div class="product-card" data-category="disney">
+                <div class="product-header disney">
+                    <div class="product-title">Disney Share 10 User</div>
+                    <div class="product-price">Rp 14.000</div>
+                </div>
+                <div class="product-description">
+                    Disney Premium Share untuk 10 user dengan masa aktif 1 bulan
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Share 10 User</li>
+                        <li>Masa aktif 1 bulan</li>
+                        <li>Login via email</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran.
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Disney Share 10 User 1 Bulan" data-price="14000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Disney Share 10 User 1 Bulan" data-price="14000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="disney">
+                <div class="product-header disney">
+                    <div class="product-title">Disney Share 6 User</div>
+                    <div class="product-price">Rp 16.000</div>
+                </div>
+                <div class="product-description">
+                    Disney Premium Share untuk 6 user dengan masa aktif 1 bulan
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Share 6 User</li>
+                        <li>Masa aktif 1 bulan</li>
+                        <li>Login via email</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran.
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Disney Share 6 User 1 Bulan" data-price="16000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Disney Share 6 User 1 Bulan" data-price="16000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="disney">
+                <div class="product-header disney">
+                    <div class="product-title">Disney Share 5 User</div>
+                    <div class="product-price">Rp 19.000</div>
+                </div>
+                <div class="product-description">
+                    Disney Premium Share untuk 5 user dengan masa aktif 1 bulan
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Share 5 User</li>
+                        <li>Masa aktif 1 bulan</li>
+                        <li>Login via email</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran.
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Disney Share 5 User 1 Bulan" data-price="19000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Disney Share 5 User 1 Bulan" data-price="19000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="disney">
+                <div class="product-header disney">
+                    <div class="product-title">Disney Private</div>
+                    <div class="product-price">Rp 35.000</div>
+                </div>
+                <div class="product-description">
+                    Disney Premium Private untuk 1 user dengan masa aktif 1 bulan
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Private 1 User</li>
+                        <li>Masa aktif 1 bulan</li>
+                        <li>Login via email</li>
+                        <li>Garansi aktif</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran.
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Disney Private 1 Bulan" data-price="35000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Disney Private 1 Bulan" data-price="35000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produk Vidio -->
+            <div class="product-card" data-category="vidio">
+                <div class="product-header vidio">
+                    <div class="product-title">Vidio Share Phone</div>
+                    <div class="product-price">Rp 17.000</div>
+                </div>
+                <div class="product-description">
+                    Vidio Premium Share untuk perangkat phone dengan masa aktif 1 bulan
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Share 1 Bulan Phone</li>
+                        <li>Login via email atau user pass</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun login via email atau user pass. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Vidio Share 1 Bulan Phone" data-price="17000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Vidio Share 1 Bulan Phone" data-price="17000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="vidio">
+                <div class="product-header vidio">
+                    <div class="product-title">Vidio Share Alldev</div>
+                    <div class="product-price">Rp 20.000</div>
+                </div>
+                <div class="product-description">
+                    Vidio Premium Share untuk semua perangkat dengan masa aktif 1 bulan
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Share 1 Bulan Alldev</li>
+                        <li>Login via email atau user pass</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun login via email atau user pass. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Vidio Share 1 Bulan Alldev" data-price="20000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Vidio Share 1 Bulan Alldev" data-price="20000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="vidio">
+                <div class="product-header vidio">
+                    <div class="product-title">Vidio Private Phone</div>
+                    <div class="product-price">Rp 25.000</div>
+                </div>
+                <div class="product-description">
+                    Vidio Premium Private untuk perangkat phone dengan masa aktif 1 bulan
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Private 1 Bulan Phone</li>
+                        <li>Login via email atau user pass</li>
+                        <li>Garansi aktif</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun login via email atau user pass. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Vidio Private 1 Bulan Phone" data-price="25000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Vidio Private 1 Bulan Phone" data-price="25000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="vidio">
+                <div class="product-header vidio">
+                    <div class="product-title">Vidio Private Alldev</div>
+                    <div class="product-price">Rp 30.000</div>
+                </div>
+                <div class="product-description">
+                    Vidio Premium Private untuk semua perangkat dengan masa aktif 1 bulan
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Private 1 Bulan Alldev</li>
+                        <li>Login via email atau user pass</li>
+                        <li>Garansi aktif</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun login via email atau user pass. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Vidio Private 1 Bulan Alldev" data-price="30000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Vidio Private 1 Bulan Alldev" data-price="30000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produk Wink -->
+            <div class="product-card" data-category="wink">
+                <div class="product-header wink">
+                    <div class="product-title">Wink Private 7 Hari</div>
+                    <div class="product-price">Rp 6.000</div>
+                </div>
+                <div class="product-description">
+                    Wink Premium Private dengan masa aktif 7 hari
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Private 7 Hari</li>
+                        <li>Akun premium</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Tanyakan stok terlebih dahulu. Email buyer wajib aktif. Membeli = setuju dengan S&K. Proses setelah pembayaran.
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Wink Private 7 Hari" data-price="6000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Wink Private 7 Hari" data-price="6000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="wink">
+                <div class="product-header wink">
+                    <div class="product-title">Wink Private 1 Bulan</div>
+                    <div class="product-price">Rp 13.000</div>
+                </div>
+                <div class="product-description">
+                    Wink Premium Private dengan masa aktif 1 bulan
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Private 1 Bulan</li>
+                        <li>Akun premium</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Tanyakan stok terlebih dahulu. Email buyer wajib aktif. Membeli = setuju dengan S&K. Proses setelah pembayaran.
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Wink Private 1 Bulan" data-price="13000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Wink Private 1 Bulan" data-price="13000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produk Viu -->
+            <div class="product-card" data-category="viu">
+                <div class="product-header viu">
+                    <div class="product-title">Viu Private 1 Tahun</div>
+                    <div class="product-price">Rp 7.000</div>
+                </div>
+                <div class="product-description">
+                    Viu Premium Private Unlimited dengan masa aktif 1 tahun
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Private Unlimited 1 Tahun</li>
+                        <li>Akun dari admin</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun dari admin. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Viu Private Unlimited 1 Tahun" data-price="7000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Viu Private Unlimited 1 Tahun" data-price="7000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="viu">
+                <div class="product-header viu">
+                    <div class="product-title">Viu Private Lifetime</div>
+                    <div class="product-price">Rp 10.000</div>
+                </div>
+                <div class="product-description">
+                    Viu Premium Private Unlimited dengan masa aktif lifetime
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Private Unlimited Lifetime</li>
+                        <li>Akun dari admin</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun dari admin. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Viu Private Unlimited Lifetime" data-price="10000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Viu Private Unlimited Lifetime" data-price="10000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="viu">
+                <div class="product-header viu">
+                    <div class="product-title">Viu Private 6 Bulan</div>
                     <div class="product-price">Rp 5.000</div>
                 </div>
                 <div class="product-description">
-                    Akses penuh fitur CapCut premium dengan akun private Anda sendiri
+                    Viu Premium Private Unlimited dengan masa aktif 6 bulan
                 </div>
-                <div class="product-details" id="capcutPrivate">
-                    <div class="guarantee">Harga sudah termasuk garansi 7 hari</div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
                     <ul class="feature-list">
-                        <li>Akses Premium</li>
-                        <li>Akun Private</li>
-                        <li>Garansi 7 Hari</li>
-                        <li>Update Rutin</li>
-                        <li>Support 24 Jam</li>
-                        <li>Tanpa Watermark</li>
-                        <li>Template Eksklusif</li>
-                        <li>Easy to Use</li>
+                        <li>Private Unlimited 6 Bulan</li>
+                        <li>Akun dari admin</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
                     </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun dari admin. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
                 </div>
                 <div class="product-actions">
-                    <button class="buy-btn" data-product="CapCut Private" data-price="5000">
+                    <button class="buy-btn" data-product="Viu Private Unlimited 6 Bulan" data-price="5000">
                         <i class="fas fa-shopping-bag"></i> Beli Sekarang
                     </button>
-                    <button class="add-to-cart-btn" data-product="CapCut Private" data-price="5000">
+                    <button class="add-to-cart-btn" data-product="Viu Private Unlimited 6 Bulan" data-price="5000">
                         <i class="fas fa-cart-plus"></i> Keranjang
                     </button>
                 </div>
             </div>
 
-            <div class="product-card" data-category="capcut">
-                <div class="product-header capcut">
-                    <div class="product-title">CapCut Public</div>
-                    <div class="product-price">Rp 2.500</div>
+            <!-- Produk IQIYI -->
+            <div class="product-card" data-category="iqiyi">
+                <div class="product-header iqiyi">
+                    <div class="product-title">IQIYI Share Standar</div>
+                    <div class="product-price">Rp 8.000</div>
                 </div>
                 <div class="product-description">
-                    Akses fitur CapCut premium dengan akun public yang dapat digunakan bersama
+                    IQIYI Premium Share Standar dengan masa aktif 1 bulan
                 </div>
-                <div class="product-details" id="capcutPublic">
-                    <div class="guarantee">Harga sudah termasuk garansi 3 hari</div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
                     <ul class="feature-list">
-                        <li>Akses Premium</li>
-                        <li>Akun Public</li>
-                        <li>Garansi 3 Hari</li>
-                        <li>Update Berkala</li>
-                        <li>Support 12 Jam</li>
-                        <li>Tanpa Watermark</li>
-                        <li>Template Standar</li>
-                        <li>Easy to Use</li>
+                        <li>Share 1 Bulan Standar</li>
+                        <li>Akun dari admin</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
                     </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun dari admin. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
                 </div>
                 <div class="product-actions">
-                    <button class="buy-btn" data-product="CapCut Public" data-price="2500">
+                    <button class="buy-btn" data-product="IQIYI Share 1 Bulan Standar" data-price="8000">
                         <i class="fas fa-shopping-bag"></i> Beli Sekarang
                     </button>
-                    <button class="add-to-cart-btn" data-product="CapCut Public" data-price="2500">
+                    <button class="add-to-cart-btn" data-product="IQIYI Share 1 Bulan Standar" data-price="8000">
                         <i class="fas fa-cart-plus"></i> Keranjang
                     </button>
                 </div>
             </div>
 
-            <!-- Produk AM -->
-            <div class="product-card" data-category="am">
-                <div class="product-header am">
-                    <div class="product-title">AM Panel 3GB</div>
-                    <div class="product-price">Rp 1.000</div>
+            <div class="product-card" data-category="iqiyi">
+                <div class="product-header iqiyi">
+                    <div class="product-title">IQIYI Share Premium</div>
+                    <div class="product-price">Rp 10.000</div>
                 </div>
                 <div class="product-description">
-                    Panel private dengan kapasitas 3GB, garansi 10 hari, dan performa super cepat
+                    IQIYI Premium Share Premium dengan masa aktif 1 bulan
                 </div>
-                <div class="product-details" id="am3gb">
-                    <div class="guarantee">Harga sudah termasuk garansi 10 hari</div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
                     <ul class="feature-list">
-                        <li>Panel Private</li>
-                        <li>Garansi 10 Hari</li>
-                        <li>Super Cepat</li>
-                        <li>Anti Intip</li>
-                        <li>Anti Down</li>
-                        <li>Support 24 Jam</li>
-                        <li>Backup Rutin</li>
-                        <li>Easy to Use</li>
+                        <li>Share 1 Bulan Premium</li>
+                        <li>Akun dari admin</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
                     </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun dari admin. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
                 </div>
                 <div class="product-actions">
-                    <button class="buy-btn" data-product="AM Panel 3GB" data-price="1000">
+                    <button class="buy-btn" data-product="IQIYI Share 1 Bulan Premium" data-price="10000">
                         <i class="fas fa-shopping-bag"></i> Beli Sekarang
                     </button>
-                    <button class="add-to-cart-btn" data-product="AM Panel 3GB" data-price="1000">
+                    <button class="add-to-cart-btn" data-product="IQIYI Share 1 Bulan Premium" data-price="10000">
                         <i class="fas fa-cart-plus"></i> Keranjang
                     </button>
                 </div>
             </div>
 
-            <div class="product-card" data-category="am">
-                <div class="product-header am">
-                    <div class="product-title">AM Panel 5GB</div>
-                    <div class="product-price">Rp 1.500</div>
+            <div class="product-card" data-category="iqiyi">
+                <div class="product-header iqiyi">
+                    <div class="product-title">IQIYI Share 1 Tahun</div>
+                    <div class="product-price">Rp 15.000</div>
                 </div>
                 <div class="product-description">
-                    Panel private dengan kapasitas lebih besar, cocok untuk kebutuhan jangka panjang
+                    IQIYI Premium Share dengan masa aktif 1 tahun
                 </div>
-                <div class="product-details" id="am5gb">
-                    <div class="guarantee">Harga sudah termasuk garansi 15 hari</div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
                     <ul class="feature-list">
-                        <li>Panel Private</li>
-                        <li>Garansi 15 Hari</li>
-                        <li>Super Cepat</li>
-                        <li>Anti Intip</li>
-                        <li>Anti Down</li>
-                        <li>Support 24 Jam</li>
-                        <li>Backup Rutin</li>
-                        <li>Easy to Use</li>
+                        <li>Share 1 Tahun</li>
+                        <li>Akun dari admin</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
                     </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun dari admin. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
                 </div>
                 <div class="product-actions">
-                    <button class="buy-btn" data-product="AM Panel 5GB" data-price="1500">
+                    <button class="buy-btn" data-product="IQIYI Share 1 Tahun" data-price="15000">
                         <i class="fas fa-shopping-bag"></i> Beli Sekarang
                     </button>
-                    <button class="add-to-cart-btn" data-product="AM Panel 5GB" data-price="1500">
+                    <button class="add-to-cart-btn" data-product="IQIYI Share 1 Tahun" data-price="15000">
                         <i class="fas fa-cart-plus"></i> Keranjang
                     </button>
                 </div>
             </div>
 
-            <!-- Produk Panel Lainnya -->
-            <div class="product-card" data-category="panel">
-                <div class="product-header">
-                    <div class="product-title">Panel 10GB</div>
-                    <div class="product-price">Rp 2.500</div>
+            <div class="product-card" data-category="iqiyi">
+                <div class="product-header iqiyi">
+                    <div class="product-title">IQIYI Private Standar</div>
+                    <div class="product-price">Rp 29.000</div>
                 </div>
                 <div class="product-description">
-                    Panel private dengan kapasitas maksimal untuk kebutuhan bisnis dan profesional
+                    IQIYI Premium Private Standar dengan masa aktif 1 bulan
                 </div>
-                <div class="product-details" id="panel10gb">
-                    <div class="guarantee">Harga sudah termasuk garansi 30 hari</div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
                     <ul class="feature-list">
-                        <li>Panel Private</li>
-                        <li>Garansi 30 Hari</li>
-                        <li>Super Cepat</li>
-                        <li>Anti Intip</li>
-                        <li>Anti Down</li>
-                        <li>Support 24 Jam</li>
-                        <li>Backup Rutin</li>
-                        <li>Easy to Use</li>
+                        <li>Private 1 Bulan Standar</li>
+                        <li>Akun dari admin</li>
+                        <li>Garansi aktif</li>
                         <li>Priority Support</li>
                     </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun dari admin. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
                 </div>
                 <div class="product-actions">
-                    <button class="buy-btn" data-product="Panel 10GB" data-price="2500">
+                    <button class="buy-btn" data-product="IQIYI Private 1 Bulan Standar" data-price="29000">
                         <i class="fas fa-shopping-bag"></i> Beli Sekarang
                     </button>
-                    <button class="add-to-cart-btn" data-product="Panel 10GB" data-price="2500">
+                    <button class="add-to-cart-btn" data-product="IQIYI Private 1 Bulan Standar" data-price="29000">
                         <i class="fas fa-cart-plus"></i> Keranjang
                     </button>
                 </div>
             </div>
 
-            <div class="product-card" data-category="panel">
-                <div class="product-header">
-                    <div class="product-title">Panel Unlimited</div>
-                    <div class="product-price">Rp 5.000</div>
+            <div class="product-card" data-category="iqiyi">
+                <div class="product-header iqiyi">
+                    <div class="product-title">IQIYI Private Premium</div>
+                    <div class="product-price">Rp 34.000</div>
                 </div>
                 <div class="product-description">
-                    Panel private dengan kapasitas unlimited untuk kebutuhan yang tidak terbatas
+                    IQIYI Premium Private Premium dengan masa aktif 1 bulan
                 </div>
-                <div class="product-details" id="panelUnlimited">
-                    <div class="guarantee">Harga sudah termasuk garansi 30 hari</div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
                     <ul class="feature-list">
-                        <li>Panel Private</li>
-                        <li>Kapasitas Unlimited</li>
-                        <li>Garansi 30 Hari</li>
-                        <li>Super Cepat</li>
-                        <li>Anti Intip</li>
-                        <li>Anti Down</li>
-                        <li>Support 24 Jam</li>
-                        <li>Backup Rutin</li>
-                        <li>Easy to Use</li>
+                        <li>Private 1 Bulan Premium</li>
+                        <li>Akun dari admin</li>
+                        <li>Garansi aktif</li>
                         <li>Priority Support</li>
                     </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun dari admin. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
                 </div>
                 <div class="product-actions">
-                    <button class="buy-btn" data-product="Panel Unlimited" data-price="5000">
+                    <button class="buy-btn" data-product="IQIYI Private 1 Bulan Premium" data-price="34000">
                         <i class="fas fa-shopping-bag"></i> Beli Sekarang
                     </button>
-                    <button class="add-to-cart-btn" data-product="Panel Unlimited" data-price="5000">
+                    <button class="add-to-cart-btn" data-product="IQIYI Private 1 Bulan Premium" data-price="34000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produk Bstation -->
+            <div class="product-card" data-category="bstation">
+                <div class="product-header bstation">
+                    <div class="product-title">Bstation Share 1 Bulan</div>
+                    <div class="product-price">Rp 8.000</div>
+                </div>
+                <div class="product-description">
+                    Bstation Premium Share dengan masa aktif 1 bulan
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Share 1 Bulan</li>
+                        <li>Akun dari admin</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun dari admin. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Bstation Share 1 Bulan" data-price="8000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Bstation Share 1 Bulan" data-price="8000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="bstation">
+                <div class="product-header bstation">
+                    <div class="product-title">Bstation Share 2 Bulan</div>
+                    <div class="product-price">Rp 15.000</div>
+                </div>
+                <div class="product-description">
+                    Bstation Premium Share dengan masa aktif 2 bulan
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Share 2 Bulan</li>
+                        <li>Akun dari admin</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun dari admin. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Bstation Share 2 Bulan" data-price="15000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Bstation Share 2 Bulan" data-price="15000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="bstation">
+                <div class="product-header bstation">
+                    <div class="product-title">Bstation Share 1 Tahun</div>
+                    <div class="product-price">Rp 20.000</div>
+                </div>
+                <div class="product-description">
+                    Bstation Premium Share dengan masa aktif 1 tahun
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Share 1 Tahun</li>
+                        <li>Akun dari admin</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun dari admin. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Bstation Share 1 Tahun" data-price="20000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Bstation Share 1 Tahun" data-price="20000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="bstation">
+                <div class="product-header bstation">
+                    <div class="product-title">Bstation Private</div>
+                    <div class="product-price">Rp 30.000</div>
+                </div>
+                <div class="product-description">
+                    Bstation Premium Private dengan masa aktif 1 bulan
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Private 1 Bulan</li>
+                        <li>Akun dari admin</li>
+                        <li>Garansi aktif</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun dari admin. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Bstation Private 1 Bulan" data-price="30000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Bstation Private 1 Bulan" data-price="30000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produk Wattpad -->
+            <div class="product-card" data-category="wattpad">
+                <div class="product-header wattpad">
+                    <div class="product-title">Wattpad Share 1 Bulan</div>
+                    <div class="product-price">Rp 10.000</div>
+                </div>
+                <div class="product-description">
+                    Wattpad Premium Share dengan masa aktif 1 bulan
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Share 1 Bulan</li>
+                        <li>Akun dari admin</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun dari admin. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Wattpad Share 1 Bulan" data-price="10000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Wattpad Share 1 Bulan" data-price="10000">
+                        <i class="fas fa-cart-plus"></i> Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="wattpad">
+                <div class="product-header wattpad">
+                    <div class="product-title">Wattpad Share 1 Tahun</div>
+                    <div class="product-price">Rp 20.000</div>
+                </div>
+                <div class="product-description">
+                    Wattpad Premium Share dengan masa aktif 1 tahun
+                </div>
+                <div class="product-details">
+                    <div class="guarantee">Garansi aktif selama masa langganan</div>
+                    <ul class="feature-list">
+                        <li>Share 1 Tahun</li>
+                        <li>Akun dari admin</li>
+                        <li>Garansi aktif</li>
+                        <li>Support</li>
+                    </ul>
+                    <div class="note-box">
+                        <strong>Note:</strong> Akun dari admin. Wajib tanyakan stock terlebih dahulu. Proses setelah pembayaran (tergantung antrian).
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="buy-btn" data-product="Wattpad Share 1 Tahun" data-price="20000">
+                        <i class="fas fa-shopping-bag"></i> Beli Sekarang
+                    </button>
+                    <button class="add-to-cart-btn" data-product="Wattpad Share 1 Tahun" data-price="20000">
                         <i class="fas fa-cart-plus"></i> Keranjang
                     </button>
                 </div>
@@ -900,54 +1296,11 @@
         </div>
 
         <footer>
-            <p>© 2023 Panel Produk - Tema Hewan Lucu. Semua hak dilindungi. 🐾</p>
+            <p>© 2023 Toko Premium - Berbagai Layanan Premium Terlengkap. Semua hak dilindungi.</p>
         </footer>
     </div>
 
     <script>
-        // Fungsi untuk toggle detail produk
-        function toggleDetails(productId) {
-            const details = document.getElementById(productId);
-            details.classList.toggle('active');
-        }
-
-        // Event listener untuk kartu produk
-        document.querySelectorAll('.product-card').forEach(card => {
-            card.addEventListener('click', (e) => {
-                // Cegah toggle detail jika yang diklik adalah tombol
-                if (!e.target.classList.contains('buy-btn') && !e.target.classList.contains('add-to-cart-btn')) {
-                    const details = card.querySelector('.product-details');
-                    details.classList.toggle('active');
-                }
-            });
-        });
-
-        // Filter kategori
-        document.querySelectorAll('.category-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                // Hapus kelas active dari semua tombol
-                document.querySelectorAll('.category-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                
-                // Tambah kelas active ke tombol yang diklik
-                button.classList.add('active');
-                
-                const category = button.getAttribute('data-category');
-                
-                // Tampilkan/sembunyikan produk berdasarkan kategori
-                document.querySelectorAll('.product-card').forEach(card => {
-                    if (category === 'all' || card.getAttribute('data-category') === category) {
-                        card.style.display = 'block';
-                        // Tambah animasi
-                        card.style.animation = 'fadeInUp 0.5s ease-out';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-
         // Keranjang belanja
         let cart = [];
         const cartModal = document.getElementById('cartModal');
@@ -967,29 +1320,53 @@
             cartModal.classList.remove('active');
         });
 
-        // Tambah ke keranjang
-        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const product = button.getAttribute('data-product');
-                const price = parseInt(button.getAttribute('data-price'));
+        // Filter kategori
+        document.querySelectorAll('.category-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Hapus kelas active dari semua tombol
+                document.querySelectorAll('.category-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
                 
-                addToCart(product, price);
+                // Tambah kelas active ke tombol yang diklik
+                button.classList.add('active');
+                
+                const category = button.getAttribute('data-category');
+                
+                // Tampilkan/sembunyikan produk berdasarkan kategori
+                document.querySelectorAll('.product-card').forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
         });
 
-        // Beli sekarang
-        document.querySelectorAll('.buy-btn').forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const product = button.getAttribute('data-product');
-                const price = parseInt(button.getAttribute('data-price'));
+        // Event listener untuk tombol
+        document.addEventListener('click', function(e) {
+            // Tombol Beli Sekarang
+            if (e.target.classList.contains('buy-btn') || e.target.parentElement.classList.contains('buy-btn')) {
+                const btn = e.target.classList.contains('buy-btn') ? e.target : e.target.parentElement;
+                const product = btn.getAttribute('data-product');
+                const price = parseInt(btn.getAttribute('data-price'));
                 
-                // Kosongkan keranjang dan tambah produk yang dipilih
-                cart = [{ product, price, quantity: 1 }];
-                updateCart();
-                cartModal.classList.add('active');
-            });
+                // Langsung buka WhatsApp untuk pembelian tunggal
+                const message = `Halo, saya ingin membeli produk:\n- ${product} = Rp ${price.toLocaleString()}\n\nSaya ingin memesan produk ini. Terima kasih!`;
+                const encodedMessage = encodeURIComponent(message);
+                const phoneNumber = "6281234567890"; // Ganti dengan nomor WhatsApp Anda
+                window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+            }
+            
+            // Tombol Keranjang
+            if (e.target.classList.contains('add-to-cart-btn') || e.target.parentElement.classList.contains('add-to-cart-btn')) {
+                const btn = e.target.classList.contains('add-to-cart-btn') ? e.target : e.target.parentElement;
+                const product = btn.getAttribute('data-product');
+                const price = parseInt(btn.getAttribute('data-price'));
+                
+                addToCart(product, price);
+            }
         });
 
         // Fungsi tambah ke keranjang
@@ -1018,7 +1395,7 @@
             let count = 0;
             
             if (cart.length === 0) {
-                cartItems.innerHTML = '<p style="text-align:center; color:#999; padding:20px; font-weight:500;">Keranjang belanja kosong</p>';
+                cartItems.innerHTML = '<p style="text-align:center; color:#999; padding:20px;">Keranjang belanja kosong</p>';
             } else {
                 cart.forEach((item, index) => {
                     const itemTotal = item.price * item.quantity;
@@ -1034,7 +1411,7 @@
                         </div>
                         <div class="cart-item-quantity">
                             <button class="quantity-btn" onclick="decreaseQuantity(${index})">-</button>
-                            <span style="font-weight:600;">${item.quantity}</span>
+                            <span>${item.quantity}</span>
                             <button class="quantity-btn" onclick="increaseQuantity(${index})">+</button>
                         </div>
                     `;
@@ -1047,12 +1424,12 @@
         }
 
         // Fungsi untuk mengubah jumlah item
-        function increaseQuantity(index) {
+        window.increaseQuantity = function(index) {
             cart[index].quantity++;
             updateCart();
         }
 
-        function decreaseQuantity(index) {
+        window.decreaseQuantity = function(index) {
             if (cart[index].quantity > 1) {
                 cart[index].quantity--;
             } else {
